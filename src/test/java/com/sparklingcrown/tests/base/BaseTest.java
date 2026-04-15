@@ -47,7 +47,7 @@ public WebDriver initializeDriver() {
     WebDriver driver = new ChromeDriver(options);
     
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-     driver.manage().window().maximize(); // You can comment this out as we set size above
+    // driver.manage().window().maximize(); // You can comment this out as we set size above
     
     return driver;
 }
