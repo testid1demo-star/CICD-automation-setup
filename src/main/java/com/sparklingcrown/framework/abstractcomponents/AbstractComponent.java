@@ -79,11 +79,23 @@ public class AbstractComponent {
     public String getCartCount() {
         return driver.findElement(cartCount).getText();
     }
-
+/** 
     public void clickShopAll() {
         driver.findElement(shopAllLink).click();
     }
+    */
+public void clickShopAll() {
+    By shopAllLocator = By.xpath("//a[@href='/collections/shop']");
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     
+    // This waits for the element to be fresh and clickable
+    wait.until(ExpectedConditions.refreshed(
+        ExpectedConditions.elementToBeClickable(shopAllLocator)
+    ));
+    
+    driver.findElement(shopAllLocator).click();
+}
+
     public void pressEnterKey(By locator) {
         driver.findElement(locator).sendKeys(Keys.ENTER);
     }
