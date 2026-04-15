@@ -2,6 +2,8 @@ package com.sparklingcrown.testall;
 
 
 import com.sparklingcrown.tests.base.BaseTest;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -54,11 +56,22 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(loginPage.getGeneralError(), "You have Entered Invalid Details ...!", "General error validation failed");
     }
 
-    @Test(priority = 8, groups = "finalFlow")
+   /**  @Test(priority = 8, groups = "finalFlow")
     public void TC08_validCredentials_shouldRedirectToHome() {
     	loginPage.login("testid1demo@gmail.com", "Test@1234"); //correct code
      //   loginPage.login("testid1demo@gmail.com", "Test@1235"); // wrong code - writes only to check fail reports - screenshot
         // Add assertion if you have a landing page check
         Assert.assertEquals(driver.getCurrentUrl(),"https://sparklingcrown.24livehost.com/", "Login failed");
     }
+*/
+    @Test(priority = 8, groups = "finalFlow")
+public void TC08_validCredentials_shouldRedirectToHome() {
+    loginPage.login("testid1demo@gmail.com", "Test@1234");
+    
+    // Explicitly wait for the URL to change to the Home Page
+    WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
+    wait.until(org.openqa.selenium.support.ui.ExpectedConditions.urlToBe("https://sparklingcrown.24livehost.com/"));
+
+    Assert.assertEquals(driver.getCurrentUrl(), "https://sparklingcrown.24livehost.com/", "Login failed");
+}
 }

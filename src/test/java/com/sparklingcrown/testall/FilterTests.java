@@ -27,7 +27,7 @@ public class FilterTests extends BaseTest {
 					"Expected category to contain RING but found: " + category);
 		}
 	}
-
+/** 
 	@Test(priority = 2, groups = "finalFlow")
 	public void clearFilterTest() {
 		filterPage = new FilterPage(driver);
@@ -49,6 +49,29 @@ public class FilterTests extends BaseTest {
 		Assert.assertTrue(categoriesAfterClear.size() > filteredCategories.size(),
 				"Clear filter failed: still filtered, expected multiple category types.");
 	}
+*/
+
+@Test(priority = 2, groups = "finalFlow")
+public void clearFilterTest() {
+    filterPage = new FilterPage(driver);
+    filterPage.goToListingPage();
+    filterPage.selectCategory("LOCKETS");
+    filterPage.waitForProductSectionUpdate();
+
+    List<String> filteredCategories = filterPage.getAllVisibleProductCategories();
+    
+    filterPage.clearFilter();
+    
+    // Give the page a moment to reset the categories
+    // If your Page Object has a wait for 'Invisibility of Spinner', use it here.
+    // Otherwise, a 2-second hard wait will prove if timing is the issue:
+    try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
+
+    List<String> categoriesAfterClear = filterPage.getAllVisibleProductCategories();
+    Assert.assertTrue(categoriesAfterClear.size() > filteredCategories.size(),
+            "Clear filter failed: still filtered, expected multiple category types. Found: " 
+            + categoriesAfterClear.size() + " but had: " + filteredCategories.size());
+}
 
 	@Test(priority = 3)
 	public void filterByPriceRangeTest() {
