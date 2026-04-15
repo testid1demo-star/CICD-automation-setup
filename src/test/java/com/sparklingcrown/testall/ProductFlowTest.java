@@ -122,7 +122,16 @@ public class ProductFlowTest extends BaseTest {
 
 			// Step 5: Now on product detail page, match title
 			String actualTitle = productDetailPage.getProductTitle();
-			Assert.assertTrue(actualTitle.toLowerCase().contains(product.toLowerCase()), "Product title mismatch");
+			//Assert.assertTrue(actualTitle.toLowerCase().contains(product.toLowerCase()), "Product title mismatch");
+
+			// Instead of: assertTrue(actualTitle.equals(expectedTitle));
+            String actualTitle = cartPage.getProductName(i).trim();
+            String expectedTitle = "Your Expected Name";
+
+            System.out.println("DEBUG: Expected: [" + expectedTitle + "] but found: [" + actualTitle + "]");
+
+            Assert.assertTrue(actualTitle.equalsIgnoreCase(expectedTitle), 
+            "Product title mismatch! Expected: " + expectedTitle + " but found: " + actualTitle);
 
 			// Select size and quantity
 			productDetailPage.selectSize();
