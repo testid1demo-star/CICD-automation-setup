@@ -17,6 +17,16 @@ public class BaseTest {
     public WebDriver driver;
     public LoginPage loginPage;
 
+/** 
+public WebDriver initializeDriver() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        return driver;
+    }
+**/
+
   public WebDriver initializeDriver() {
     WebDriverManager.chromedriver().setup();
 
@@ -37,7 +47,7 @@ public class BaseTest {
     WebDriver driver = new ChromeDriver(options);
     
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    // driver.manage().window().maximize(); // You can comment this out as we set size above
+     driver.manage().window().maximize(); // You can comment this out as we set size above
     
     return driver;
 }
