@@ -70,7 +70,7 @@
             <version>3.5.5</version> <!-- Or latest stable -->
             <configuration>
                 <suiteXmlFiles>
-                    <suiteXmlFile>testng.xml</suiteXmlFile> <!-- Can point to other XMLs -->
+                    <suiteXmlFile>testSuites/${suiteName}.xml</suiteXmlFile> <!-- Can point to other XMLs -->
                 </suiteXmlFiles>
             </configuration>
         </plugin>
