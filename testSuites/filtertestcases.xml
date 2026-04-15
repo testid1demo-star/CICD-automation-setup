@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FilterTestCases" verbose="1" parallel="false">
+
+    <listeners>
+        <listener class-name="com.sparklingcrown.listeners.TestListener" />
+    </listeners>
+
+
+    <test name="Filters">
+        <classes>
+            <class name="com.sparklingcrown.testall.FilterTests" />
+        </classes>
+    </test>
+
+</suite>

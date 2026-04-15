@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FinalFlowTestCases]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.sparklingcrown.listeners.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Regression(failed)">
+    <groups>
+      <run>
+        <include name="finalFlow"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.sparklingcrown.testall.ProductFlowTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="TC04_addMultipleProductsToCart"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sparklingcrown.testall.ProductFlowTest -->
+    </classes>
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [FinalFlowTestCases] -->

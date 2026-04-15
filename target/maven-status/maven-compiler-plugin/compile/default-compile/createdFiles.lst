@@ -1,0 +1,7 @@
+com\sparklingcrown\framework\pageobjects\FooterPage.class
+com\sparklingcrown\framework\pageobjects\SearchPage.class
+com\sparklingcrown\framework\pageobjects\FilterPage.class
+com\sparklingcrown\framework\pageobjects\LoginPage.class
+com\sparklingcrown\framework\pageobjects\ProductListingPage.class
+com\sparklingcrown\framework\abstractcomponents\AbstractComponent.class
+com\sparklingcrown\framework\pageobjects\ProductDetailPage.class

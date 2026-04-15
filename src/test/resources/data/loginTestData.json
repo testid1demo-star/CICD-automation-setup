@@ -1,0 +1,66 @@
+[
+  {
+    "testCaseId": "TC01",
+    "email": null,
+    "password": null,
+    "expectedEmailError": "Required",
+    "expectedPasswordError": "Required",
+    "expectedGeneralError": ""
+  },
+  {
+    "testCaseId": "TC02",
+    "email": "test@yopmail.com",
+    "password": null,
+    "expectedEmailError": "",
+    "expectedPasswordError": "Required",
+    "expectedGeneralError": ""
+  },
+  {
+    "testCaseId": "TC03",
+    "email": null,
+    "password": "Test@1233",
+    "expectedEmailError": "Required",
+    "expectedPasswordError": "",
+    "expectedGeneralError": ""
+  },
+  {
+    "testCaseId": "TC04",
+    "email": "testyopmailcom",
+    "password": "Test@1233",
+    "expectedEmailError": "Invalid email address.",
+    "expectedPasswordError": "",
+    "expectedGeneralError": ""
+  },
+  {
+    "testCaseId": "TC05",
+    "email": "testid1demo@gmail.com",
+    "password": "teSt@1111",
+    "expectedEmailError": "",
+    "expectedPasswordError": "",
+    "expectedGeneralError": "You have Entered Invalid Details ...!"
+  },
+  {
+    "testCaseId": "TC06",
+    "email": "testid1demo@yopmail.com",
+    "password": "testtt",
+    "expectedEmailError": "",
+    "expectedPasswordError": "Password must be at least 6 characters long, with at least one uppercase letter, one lowercase letter, one special character, one number, and no spaces.",
+    "expectedGeneralError": ""
+  },
+  {
+    "testCaseId": "TC07",
+    "email": "test1@gmail.com",
+    "password": "tEst@1234",
+    "expectedEmailError": "",
+    "expectedPasswordError": "",
+    "expectedGeneralError": "You have Entered Invalid Details ...!"
+  },
+  {
+    "testCaseId": "TC08",
+    "email": "testid1demo@gmail.com",
+    "password": "Test@1234",
+    "expectedEmailError": "",
+    "expectedPasswordError": "",
+    "expectedGeneralError": ""
+  }
+]

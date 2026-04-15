@@ -1,0 +1,2 @@
+JMH S 23 sahil.BitShiftBenchmark S 54 sahil.jmh_generated.BitShiftBenchmark_bitshift_jmhTest S 8 bitshift S 10 Throughput E A 1 1 1 E E E E E E E E E E E E E E E E E 
+JMH S 23 sahil.BitShiftBenchmark S 54 sahil.jmh_generated.BitShiftBenchmark_multiply_jmhTest S 8 multiply S 10 Throughput E A 1 1 1 E E E E E E E E E E E E E E E E E 
