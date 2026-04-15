@@ -17,7 +17,7 @@ public class BaseTest {
     public WebDriver driver;
     public LoginPage loginPage;
 
- 
+ /**
 public WebDriver initializeDriver() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -25,8 +25,8 @@ public WebDriver initializeDriver() {
         driver.manage().window().maximize();
         return driver;
     }
+*/
 
-/**
   public WebDriver initializeDriver() {
     WebDriverManager.chromedriver().setup();
 
@@ -51,7 +51,7 @@ public WebDriver initializeDriver() {
     
     return driver;
 }
-*/
+
     @BeforeMethod(alwaysRun = true)
     public void launchApplication() throws IOException {
         driver = initializeDriver();
